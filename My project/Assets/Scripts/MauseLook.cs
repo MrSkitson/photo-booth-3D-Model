@@ -10,7 +10,7 @@ public class MauseLook : MonoBehaviour
 
     [SerializeField] private float sensitivity = 250f;
     [SerializeField] private Transform player;
-    float rotation = 0.0f; 
+    float rotation = 0.2f; 
     
     [SerializeField] private float minAngle = -90f;
     [SerializeField] private float maxAngle = 90f;
@@ -20,7 +20,7 @@ public class MauseLook : MonoBehaviour
     {
         MauseXY();
         RotationMouse();
-        
+       
         
     }
 
