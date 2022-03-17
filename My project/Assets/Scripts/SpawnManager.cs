@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    
     public GameObject Cube;
     public GameObject Capsule;
     public GameObject Sphere;
@@ -18,7 +19,6 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         
         //InvokeRepeating("CubeSpown", startDelay, modelSpawnTime);
         CubeSpown();
     }
