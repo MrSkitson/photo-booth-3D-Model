@@ -1,10 +1,13 @@
  using UnityEngine;
  using System.Collections;
+ using UnityEngine.UI;
+
  
  public class SnapshotCamera : MonoBehaviour {
      
      [SerializeField] private int resWidth = 2550; 
      [SerializeField] private int resHeight = 3300;
+    public Button PhotoButton;
  
      private bool takeHiResShot = false;
  
@@ -15,8 +18,11 @@
                               System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
      }
  
-     public void TakeHiResShot() {
+ 
+     public virtual void TakeHiResShot() {
          takeHiResShot = true;
+         
+         
      }
  
      void LateUpdate() {
@@ -36,7 +42,14 @@
              System.IO.File.WriteAllBytes(filename, bytes);
              Debug.Log(string.Format("Took screenshot to: {0}", filename));
              takeHiResShot = false;
+         } else
+         {
+             Button btn = PhotoButton.GetComponent<Button>();
+		    btn.onClick.AddListener(TakeHiResShot);
          }
+     
+        
+            
      }
  }
 
