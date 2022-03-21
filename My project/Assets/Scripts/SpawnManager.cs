@@ -78,16 +78,8 @@ public class SpawnManager : MonoBehaviour
         objectRb = GetComponent<Rigidbody>(); 
        
     }
-
-   public void SphereSpown(int CurrentIndex)
-   {
-       
-
-     Vector3 spawnPos = new Vector3(ModelSpawnX, ModelSpawnY, ModelSpawnZ);
-     Instantiate(Models[CurrentIndex], spawnPos, Quaternion.identity);
-       objectRb = GetComponent<Rigidbody>(); 
      
-    }
+    
 
     void LateUpdate()
     {      

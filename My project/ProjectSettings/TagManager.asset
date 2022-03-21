@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - OverviewCamera
+  - Model1
+  - Model2
+  - Model3
+  - Model
   layers:
   - Default
   - TransparentFX
